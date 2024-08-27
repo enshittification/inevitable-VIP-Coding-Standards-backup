@@ -143,7 +143,7 @@ class RulesetTest {
 	 */
 	private function collect_phpcs_result() {
 		$php = '';
-		if ( \PHP_BINARY && in_array( \PHP_SAPI, [ 'cgi-fcgi', 'cli', 'cli-server', 'phpdbg' ], true ) ) {
+		if ( defined( 'PHP_BINARY' ) && in_array( \PHP_SAPI, [ 'cgi-fcgi', 'cli', 'cli-server', 'phpdbg' ], true ) ) {
 			$php = \PHP_BINARY . ' ';
 		}
 
